@@ -1,0 +1,133 @@
+/* Dashboard.css */
+
+body {
+    margin: 0;
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 28px;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto 25px auto;
+    padding: 14px 18px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: border 0.3s;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fafafa;
+    min-width: 600px;
+}
+
+.user-table th,
+.user-table td {
+    padding: 16px;
+    text-align: left;
+    font-size: 16px;
+}
+
+.user-table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.user-table tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+.user-table tr:hover {
+    background-color: #e0f0ff;
+    transition: background-color 0.3s ease;
+}
+
+.logout-btn{
+ width: 20%;
+ margin-left: 80%;
+background-color: #ef4444;
+}
+.logout-btn:hover {
+    background-color: #dc2626; }
+
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .user-table,
+    .user-table thead,
+    .user-table tbody,
+    .user-table th,
+    .user-table td,
+    .user-table tr {
+        display: block;
+    }
+
+    .user-table thead {
+        display: none;
+    }
+
+    .user-table tr {
+        margin-bottom: 15px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .user-table td {
+        padding: 10px 15px;
+        text-align: right;
+        position: relative;
+    }
+
+    .user-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+        color: #333;
+    }
+}
